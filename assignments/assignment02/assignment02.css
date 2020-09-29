@@ -42,6 +42,50 @@ Span{
   border-width: thick;
   border-width: 5px;
   border-color: blue;
+  background-color: yellow;/* David Fegan
+    Assignment02: CSS Styling and apply to HTML
+*/ 
+/* Apply inline CSS to change "Hello, World" to the color red. 
+*/
+
+/* Part A:2: Page color changed to skyblue */
+body{
+  background-color: skyblue;
+}
+
+/* PART A:3: Font Changed */
+/* The element that has the id attribute of "igottabeme" has its font changed.*/
+#igottabeme{
+  font-family: Ariel, Helvetica, Sans-Serif
+}
+
+/* PART A:4: Change the margin for all elements whose class attributes include "classy" */
+.classy{
+  margin-left: 10px;
+}
+
+/* PART B:5: Give all div elements bottom margins of 50 pixels*/ 
+Div{
+  margin-bottom: 50px;
+}
+
+/* PART B:6: give all Span elements the follwoing stles:
+width of 100 pixels
+height of 50 pixels
+padding: top and botom - 5 pixels
+padding: left and right sides - 20 pixels
+solid blue border 5 pixels thick
+yellow background
+*/
+Span{
+  width: 100px;
+  height: 50px;
+  padding-top, padding-bottom: 5px;
+  padding-left, padding-right: 20px;
+  border-style: solid;
+  border-width: thick;
+  border-width: 5px;
+  border-color: blue;
   background-color: yellow;
 }
 
@@ -100,6 +144,81 @@ font size: 20px
 */
 ul > li{
   position: sticky;
+  background-color: green;
+  padding: 5px;
+  font-size: 20px;
+  opacity: 0.1;
+}
+
+label: link{
+  background-color: red;
+}
+label: visited{
+  background-color: green;
+}
+label: hover{
+  background-color: hotpink;
+}
+
+
+
+
+}
+
+/* PART B:7: Set display property for spans according to class attributes*/ 
+.a {
+  display: inline;
+}
+.b {
+  display: block;
+}
+.c {
+  display: inline-block;
+}
+
+/* PART C:8: Force cat icon on top of other images and appear in bottom right corner of the browser window */
+ img[alt] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+img[alt=cat-icon] {
+  z-index:1;
+}
+
+/* PART C:9: Force dog icon to:
+    50 pixels to the left
+    150 pixels above where it would be if NO css     position property were applied*/
+img[alt=dog-icon]{
+  /*
+  position: relative;
+  left: 5px;
+  bottom: 150px; */ 
+}
+
+/* PART C:10: Force bird icon to appear inside the orange div, in front of the text 50 pixels bellow and 250 pixels to the right of the left edge of the Div*/
+img[div] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+img[alt=bird-icon]{
+  position: relative;
+  left: 250px;
+  top: 50px; 
+}
+/* Sets the orange background of the elements with the id attribute "positionMe"
+*/
+div[id=positionMe] {
+  background-color: orange;
+}
+
+/* PART C:11: Set the nav bar stick to the top of the browser window, in front of all other elements, set the background color to green, with 90% opacity.
+padding: 5px
+font size: 20px
+*/
+li{
   background-color: green;
   padding: 5px;
   font-size: 20px;
