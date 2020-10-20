@@ -41,7 +41,6 @@ elem[18]
 elem[19]  
   = document.getElementById("totals");
 
-
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -88,8 +87,6 @@ elem[17].children[4].children[0].onclick
 elem[18].children[4].children[0].onclick 
   = function(){add1(elem[18]);};
 
-
-
 // assign a function to the - button
 // Could i have done this using a loop?
 elem[1].children[4].children[1].onclick
@@ -128,6 +125,7 @@ elem[17].children[4].children[1].onclick
   = function(){subtract1(elem[17]);};
 elem[18].children[4].children[1].onclick 
   = function(){subtract1(elem[18]);};
+
 
 
 let currentScore=0;
@@ -181,10 +179,8 @@ function subtract1 (elem) {
 // Maybe should have made a function for this? 
 // and a function for this to put here and 
 // for the + button?  
-    
-  elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML; 
+    elem.children[3].innerHTML = elem.children[2].innerHTML - elem.children[1].innerHTML; 
 
-  
 } // END Function subtract1  
   
 // 4  : Totals: 
@@ -275,10 +271,71 @@ score17 = Number.parseInt(score17);
 let score18 = elem[18].children[2].innerHTML;
 score18 = Number.parseInt(score18);
 
-let totalScore = elem[19].children[2].innerHTML;
-totalScore = Number.parseInt(totalScore);
-elem[19].children[2].innerHTML = Number.parseInt(elem[19].children[2].innerHTML)
+//let totalScore = elem[19].children[2].innerHTML;
+//totalScore = Number.parseInt(totalScore);
+//elem[19].children[2].innerHTML = Number.parseInt(elem[19].children[2].innerHTML)
+
+//ADD if condition: if elem[].children[2].innerHTML = "-"             make score# = 0
+//OR: make into function so onclick will add to the totalScore.
 elem[19].children[2].innerHTML = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10 + score11 + score12 + score13 + score14 + score15 + score16 + score17 + score18;
+
+
+
+//elem[].children[2].innerHTMl = 0;
+//Create onClick to work with clear function
+//Clear Button is working!!!
+elem[1].children[5].children[0].onclick
+  = function(){clear(elem[1]);};
+elem[2].children[5].children[0].onclick
+  = function(){clear(elem[2]);};
+elem[3].children[5].children[0].onclick
+  = function(){clear(elem[3]);};
+elem[4].children[5].children[0].onclick
+  = function(){clear(elem[4]);};
+elem[5].children[5].children[0].onclick
+  = function(){clear(elem[5]);};
+elem[6].children[5].children[0].onclick
+  = function(){clear(elem[6]);};
+elem[7].children[5].children[0].onclick
+  = function(){clear(elem[7]);};
+elem[8].children[5].children[0].onclick
+  = function(){clear(elem[8]);};
+elem[9].children[5].children[0].onclick
+  = function(){clear(elem[9]);};
+elem[10].children[5].children[0].onclick
+  = function(){clear(elem[10]);};
+elem[11].children[5].children[0].onclick
+  = function(){clear(elem[11]);};
+elem[12].children[5].children[0].onclick
+  = function(){clear(elem[12]);};
+elem[13].children[5].children[0].onclick
+  = function(){clear(elem[13]);};
+elem[14].children[5].children[0].onclick
+  = function(){clear(elem[14]);};
+elem[15].children[5].children[0].onclick
+  = function(){clear(elem[15]);};
+elem[16].children[5].children[0].onclick
+  = function(){clear(elem[16]);};
+elem[17].children[5].children[0].onclick
+  = function(){clear(elem[17]);};
+elem[18].children[5].children[0].onclick
+  = function(){clear(elem[18]);};
+
+
+//5: ADD Function for Clear button
+function clear(elem) {
+  elem.children[2].innerHTML = 0;
+  elem.children[3].innerHTML = 0;
+}
+
+//ADD Function to have condition for totalScore
+//If score = "-" make it a zero so we dont get NAN
+
+//ADD function to have condition for overTotal
+//If over = "-" make it a zero so we dont get  NAN
+
+
+
 
 //Notes To Self
 //elem.children[0] = hole
@@ -289,12 +346,4 @@ elem[19].children[2].innerHTML = score1 + score2 + score3 + score4 + score5 + sc
 //elem.children[4].children[1] = negative buttons
 
 
-
-
-
-
-
-
-
-  
 
