@@ -1,2 +1,4 @@
 /* center-align table columns */
 th, td {text-align: center;} 
+
+/* Tried to add external css for color of buttons but could not get the .class or #id to work so went with interal insteed since I got that to work.*/
