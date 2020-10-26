@@ -44,7 +44,7 @@ function loadClubDistances() {
 
 // undo last distance of  "clubs" array
 function undoClubDistances() {
-	let clubs;
+	let clubs2;
 	// if "clubs" array already exists, load it from local storage
 	if (localStorage.getItem("clubs2")) {
 		clubs = JSON.parse(localStorage.getItem("clubs2"));
