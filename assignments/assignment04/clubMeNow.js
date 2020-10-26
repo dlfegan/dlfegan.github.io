@@ -42,6 +42,22 @@ function loadClubDistances() {
 	return clubs;
 }
 
+// undo last distance of  "clubs" array
+function loadClubDistances() {
+	let clubs;
+	// if "clubs" array already exists, load it from local storage
+	if (localStorage.getItem("clubs2")) {
+		clubs = JSON.parse(localStorage.getItem("clubs2"));
+	}
+	// otherwise create new "clubs" array, using resetAllClubs()
+	else {
+		clubs = resetAllClubDistances();
+		clubs = JSON.parse(localStorage.getItem("clubs2"));
+	}
+	return clubs;
+}
+
+
 // append one row to HTML table for each row in "clubs" array
 function appendTableRows() {
 	// select the HTML table <tbody> element
