@@ -96,8 +96,10 @@ function undoLastShot(clubs) {
 	// store the array in local storage
 	let str2 = JSON.stringify(clubs);
 	localStorage.setItem("clubs", str2);
-	
+
 	clubs = JSON.parse(localStorage.getItem("clubs"));
+	//localStorage.setItem("clubs", str2);
+	//clubs = JSON.parse(localStorage.getItem("clubs"));
 	
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
@@ -110,7 +112,7 @@ function resetAllClubDistances() {
 	// columns - 0: sortPosition, 1: clubAbbrev, 2: clubName, 
 	// 3: avgDist, 4: minDist, 5: maxDist, 6: numOfShots, 
 	// 7: loft/degrees, 8: typical/men, 9: typical/women
-	var clubs = [
+	let clubs = [
 		[ 199, "Dr",  "Driver",   0, 0, 0, 0, 10.5, 230, 200],
 		[ 300, "3+w", "3+ wood",  0, 0, 0, 0, 13.5, 210, 180],
 		[ 350, "3h",  "3 hybrid", 0, 0, 0, 0, 18.0, 180, 160],
@@ -132,6 +134,7 @@ function resetAllClubDistances() {
 // store the array in local storage
 	let str = JSON.stringify(clubs);
 	localStorage.setItem("clubs", str);
+	
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
 }
