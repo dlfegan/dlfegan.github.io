@@ -90,14 +90,15 @@ function displayClubDistanceEntryForm(c) {
 }
 
 // replace the current "clubs" array with the previous one
-function undoLastShot(clubs) {
+function undoLastShot(clubs2) {
         // your code here !
 	
 	// store the array in local storage
-	let str2 = JSON.stringify(clubs);
-	localStorage.setItem("clubs", str2);
+	//let str2 = clubs;
+	let str2 = JSON.stringify(clubs2);
+	localStorage.setItem("clubs2", str2);
 
-	clubs = JSON.parse(localStorage.getItem("clubs"));
+	clubs2 = JSON.parse(localStorage.getItem("clubs"));
 	//localStorage.setItem("clubs", str2);
 	//clubs = JSON.parse(localStorage.getItem("clubs"));
 	
@@ -133,6 +134,7 @@ function resetAllClubDistances() {
 
 // store the array in local storage
 	let str = JSON.stringify(clubs);
+	var clubs2 = clubs;
 	localStorage.setItem("clubs", str);
 	
 	// and refresh screen
