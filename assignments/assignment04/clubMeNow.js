@@ -90,12 +90,12 @@ function displayClubDistanceEntryForm(c) {
 }
 
 // replace the current "clubs" array with the previous one
-function undoLastShot(str2) {
+function undoLastShot(str2,clubs2) {
         // your code here !
 	
 
 	
-	localStorage.setItem("clubs", str2);
+	localStorage.setItem("clubs2", str2);
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
 }
