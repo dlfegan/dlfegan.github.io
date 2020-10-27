@@ -93,10 +93,11 @@ function displayClubDistanceEntryForm(c) {
 function undoLastShot(clubs) {
         // your code here !
 	
-	let str2 = JSON.stringify(clubs);
-	localStorage.setItem("clubs", str2);
-	//clubs = JSON.parse(localStorage.getItem("clubs"));
-	localStorage.getItem("clubs");
+	//let str2 = JSON.stringify(clubs);
+	/localStorage.setItem("clubs", str2);
+	clubs = JSON.parse(localStorage.getItem("clubs"));
+	//localStorage.getItem("clubs");
+	return clubs;
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
 }
