@@ -134,7 +134,7 @@ function resetAllClubDistances() {
 
 // store the array in local storage
 	let str = JSON.stringify(clubs);
-	var clubs2 = clubs;
+	var clubs2 = str;
 	localStorage.setItem("clubs", str);
 	
 	// and refresh screen
