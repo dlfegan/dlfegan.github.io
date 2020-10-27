@@ -93,13 +93,12 @@ function displayClubDistanceEntryForm(c) {
 function undoLastShot(clubs) {
         // your code here !
 	
+	// store the array in local storage
 	let str = JSON.stringify(clubs);
 	localStorage.setItem("clubs", str);
-	clubs = JSON.parse(localStorage.getItem("clubs"));
-	//localStorage.getItem("clubs");
-	return clubs;
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
+
 }
 
 // create a new (default) "clubs" array
