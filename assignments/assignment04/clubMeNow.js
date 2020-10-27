@@ -98,7 +98,7 @@ function undoLastShot(clubs2) {
 	let str2 = JSON.stringify(clubs2);
 	localStorage.setItem("clubs2", str2);
 
-	clubs2 = JSON.parse(localStorage.getItem("clubs"));
+	clubs2 = JSON.parse(localStorage.getItem("clubs2"));
 	//localStorage.setItem("clubs", str2);
 	//clubs = JSON.parse(localStorage.getItem("clubs"));
 	
