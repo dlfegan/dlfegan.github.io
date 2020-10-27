@@ -96,6 +96,9 @@ function undoLastShot(clubs) {
 	// store the array in local storage
 	let str2 = JSON.stringify(clubs);
 	localStorage.setItem("clubs", str2);
+	
+	clubs = JSON.parse(localStorage.getItem("clubs"));
+	return clubs;
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
 
