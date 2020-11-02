@@ -102,9 +102,10 @@ function undoLastShot(clubs) {
 	// and refresh screen
 	//window.location.href = "clubDistanceList.html"; 
 
-	var str = JSON.stringify(clubs);
+	let str = JSON.stringify(clubs);
+	let str2 = JSON.stringify(str);
 	//var str2 = str;
-	localStorage.setItem("clubs", str);
+	localStorage.setItem("clubs", str2);
 	
 	// and refresh screen
 	window.location.href = "clubDistanceList.html"; 
@@ -138,7 +139,7 @@ function resetAllClubDistances() {
 	];
 
 // store the array in local storage
-	var str = JSON.stringify(clubs);
+	let str = JSON.stringify(clubs);
 	//var str2 = str;
 	localStorage.setItem("clubs", str);
 	
