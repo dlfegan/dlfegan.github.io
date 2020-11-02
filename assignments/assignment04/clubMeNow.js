@@ -102,7 +102,8 @@ function undoLastShot(str) {
 	// and refresh screen
 	//window.location.href = "clubDistanceList.html"; 
 
-	let str2 = str;
+	let str2 = JSON.stringify(str);
+	//let str2 = str;
 	//var str2 = str;
 	localStorage.setItem("clubs", str2);
 	
