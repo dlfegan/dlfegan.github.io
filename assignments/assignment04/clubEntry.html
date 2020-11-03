@@ -50,11 +50,11 @@
 	let newClubName ;
 	let newClubDistances;
 
-	function addClub() {
+	function addClub(clubs) {
         // your code here
 		//set user input to append row on table
-		//let newClubName = userinput
-		clubs[clubs.length- 1] = newClubName;
+		let newClubName = localStorage.getItem('clubs',clubs[clubs.length - 1]);
+		clubs[clubs.length- 1] = localStorage.setItem('clubs',newClubName);
 	}
 	
 	// navigate to club distance LIST screen
